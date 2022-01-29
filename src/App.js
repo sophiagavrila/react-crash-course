@@ -1,8 +1,17 @@
-// This is the first React Component that we've created - selected by <App /> and displayed in index.js
 function App() {
-  // this is a regular JS function, other than the fact that it renders an HTML element
-  return <div>Hello!</div>;
-  // A Component must return something that can be rendered in the browser. (Accomplisehd with JSX code)
+  // Keep in mind that below is JSX (not standard HTML), so class must be className which is JS prop of the obj
+  return <div> 
+      <h1>My Todos</h1>
+      <div className='card'>
+        <div>
+          <h2>TITLE</h2>
+        </div>
+
+        <div className='actions'>
+          <button className='btn'>Delete</button>
+        </div>
+      </div>
+    </div>;
 }
 
 export default App;
