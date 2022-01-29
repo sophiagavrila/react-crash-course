@@ -1,5 +1,4 @@
-// (1) add Modal Component to appear when we click button 
-function Modal() { // we're not using props right now so we're ommiting is
+function Modal() {
 
     return(
         <div className="modal">
