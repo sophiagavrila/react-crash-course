@@ -1,17 +1,14 @@
-function App() {
-  // Keep in mind that below is JSX (not standard HTML), so class must be className which is JS prop of the obj
-  return <div> 
-      <h1>My Todos</h1>
-      <div className='card'>
-        <div>
-          <h2>TITLE</h2>
-        </div>
+import Todo from "./components/Todo";
 
-        <div className='actions'>
-          <button className='btn'>Delete</button>
-        </div>
-      </div>
-    </div>;
+function App() {
+  return (
+    <div>
+      <h1>My Todos</h1> 
+      <Todo text='Learn React' /> {/* Since we passed props as an arg, we used the props.text expression in the component template */}
+      <Todo text='Fold Socks' />
+      <Todo text='Beat Dark Souls' />
+    </div>
+  );
 }
 
 export default App;
