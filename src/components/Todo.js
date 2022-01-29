@@ -1,12 +1,10 @@
-// Our 2nd Component to be featured in App so we don't have to duplicate code
-function Todo() {
-  // The function must begin with a capital character to differentiate it from standrad HTML elements.
+function Todo(props) {
 
-  // c/p this from App.js
   return (
     <div className="card">
       <div>
-        <h2>TITLE</h2>
+        <h2>{props.text}</h2> {/* {} allow us to add a JS expression in JSX */}
+        {/* This will allow us to pass a value to a key (text=...) in the Todo component */}
       </div>
 
       <div className="actions">
@@ -16,5 +14,4 @@ function Todo() {
   );
 }
 
-// This allows the function to be available outside of this file
 export default Todo;
