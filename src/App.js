@@ -1,24 +1,24 @@
-// The job of the Route component is to define different paths in the URL and which component should be loaded for these diff paths.
-import { Route } from 'react-router-dom';
+import { Route, Switch } from "react-router-dom";
 
-import AllMeetupsPage from './pages/AllMeetups';
-import NewMeetupPage from './pages/NewMeetup';
-import FavoritesPage from './pages/Favorites';
+import AllMeetupsPage from "./pages/AllMeetups";
+import NewMeetupPage from "./pages/NewMeetup";
+import FavoritesPage from "./pages/Favorites";
 
 function App() {
-  // localhost:3000/ = domain..part afterwards is the path like /products, /favorites, etc...
 
-  return(
+  return (
     <div>
-      <Route path='/'>
-        <AllMeetupsPage /> {/* default component to display  */}
-      </Route>
-      <Route path='/new-meetup'>
-        <NewMeetupPage />
-      </Route>
-      <Route path='/favorites'>
-        <FavoritesPage />
-      </Route> {/* We see the "Nested" output with the AllMeetupsPage ALWAYS rendering because any other component includes it */}
+      <Switch> {/* Switch tells React that only ONE of the components should be rendered...this still won't render the right */}
+        <Route path='/' exact> {/* adding exact fixes this and makes it so that it keeps looking for the matching component path */}
+          <AllMeetupsPage />
+        </Route> {/* React Router will stop looking at the others as soon as it finds a match (/) which is why it won't render at first */}
+        <Route path='/new-meetup'>
+          <NewMeetupPage />
+        </Route>
+        <Route path='/favorites'>
+          <FavoritesPage />
+        </Route>
+      </Switch>
     </div>
   );
 }
