@@ -24,8 +24,9 @@ The commit-guided modules are as follows
   npm install --save react-router-dom@5
 ```
 
-1. Adding Routing
-2. Adding Links & Navigation
-3. Styling with CSS Modules
-4. Outputting Lists of Data
-5. \
+9. Setup `MeetupApp`, add `components` directory & `pages` directory with `AllMeetups`, `Favorites`, and `NewMeetup` components.
+10. Adding Routing
+11. Adding Links & Navigation
+12. Styling with CSS Modules
+13. Outputting Lists of Data
+14. 
